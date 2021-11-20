@@ -1,5 +1,13 @@
+html {
+    height: 100%;
+}
+
 body {
     margin-top: 50px;
+    background: url('/media/home-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #555;
 }
 
 header {
@@ -7,7 +15,55 @@ header {
     padding: 0 !important;
     
 }
-nav {
-    color: blueviolet !important;
-    background-color: chartreuse !important;
+
+#delivery-banner,
+#topnav {
+    color: lime !important;
+    background-color: black !important;
+}
+
+.dropdown-container{
+    position: relative;
+}
+
+.dropdown-menu {
+    background-color: black !important;
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    margin-left: 180px;
+  }
+  .dropdown-item{
+    color: lime !important;
+  }
+
+.text-lime {
+    color: lime !important;
+}
+
+
+.home-font {
+    text-transform: uppercase;
+}
+
+.btn-lime {
+    background: lime;
+    color: black;
+}
+
+.border-lime {
+    border: 1px solid lime !important;
+}
+
+.shop-button-home {
+    background: black;
+    color: lime;
+    min-width: 260px;
+}
+
+@media (max-width: 991px) {
+    
+    body {
+        padding-top: 320px;
+    }
 }
