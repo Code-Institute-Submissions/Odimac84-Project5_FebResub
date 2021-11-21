@@ -61,9 +61,16 @@ header {
     min-width: 260px;
 }
 
+
+
 @media (max-width: 991px) {
     
     body {
         padding-top: 320px;
     }
+    
+#delivery-banner.home-font{
+    font-size: 80%;
+}
+
 }
