@@ -3,24 +3,18 @@ html {
 }
 
 body {
-    margin-top: 50px;
+    padding-top: 80px;
     background: url('/media/home-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     color: #555;
 }
 
-header {
-    margin: 0 !important;
-    padding: 0 !important;
-    
-}
-
 .shop-button-home,
 .btn-lime,
 #delivery-banner,
 #topnav {
-    color: lime !important;
+    color: violet !important;
     background-color: black !important;
 }
 
@@ -31,14 +25,9 @@ header {
 
 
 .dropdown-item,
-.text-lime {
-    color: lime !important;
+.text-color {
+    color: violet !important;
 }
-
-.bg-lime {
-    background-color: lime;
-}
-
 
 .home-font {
     text-transform: uppercase;
@@ -46,7 +35,7 @@ header {
 
 
 .border-lime {
-    border: 1px solid lime !important;
+    border: 1px solid violet !important;
 }
 
 .shop-button-home {
@@ -65,8 +54,8 @@ header {
 
 .img-size {
     float: left;
-    width:  20rem;
-    height: 20rem;
+    width:  14rem;
+    height: 14rem;
     object-fit: cover;
     overflow: hidden;
 }
