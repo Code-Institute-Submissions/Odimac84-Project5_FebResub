@@ -16,6 +16,8 @@ header {
     
 }
 
+.shop-button-home,
+.btn-lime,
 #delivery-banner,
 #topnav {
     color: lime !important;
@@ -26,17 +28,9 @@ header {
     position: relative;
 }
 
-.dropdown-menu {
-    background-color: black !important;
-    position: absolute;
-    top: 100%; 
-    right: 0;
-    margin-left: 180px;
-  }
-  .dropdown-item{
-    color: lime !important;
-  }
 
+
+.dropdown-item,
 .text-lime {
     color: lime !important;
 }
@@ -50,18 +44,12 @@ header {
     text-transform: uppercase;
 }
 
-.btn-lime {
-    background: lime;
-    color: black;
-}
 
 .border-lime {
     border: 1px solid lime !important;
 }
 
 .shop-button-home {
-    background: black;
-    color: lime;
     min-width: 260px;
 }
 
@@ -83,8 +71,20 @@ header {
     overflow: hidden;
 }
 
+.img-size-detail {
+    float: left;
+    width:  500px;
+    height: 500px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
 .bg-account{
-    background-color: rgba(0, 0, 0, 0.7)
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.header-container {
+    padding-top: 150px;
 }
 
 
@@ -94,8 +94,26 @@ header {
         padding-top: 320px;
     }
     
-#delivery-banner.home-font{
-    font-size: 80%;
+    #delivery-banner.home-font{
+        font-size: 80%;
+    }
+
+    .dropdown-menu {
+        background-color: black !important;
+        position: absolute;
+        top: 100%; 
+        right: 0;
+        margin-right: 35%;
+      }
+
 }
 
+@media (min-width: 992px) {
+    .dropdown-menu {
+        background-color: black !important;
+        position: absolute;
+        top: 100%; 
+        right: 0;
+        margin-left: 180px;
+      }
 }
