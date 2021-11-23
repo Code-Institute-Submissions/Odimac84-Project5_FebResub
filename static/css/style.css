@@ -10,6 +10,10 @@ body {
     color: #555;
 }
 
+
+.btn-hover-index:hover,
+.btn-hover-index:active,
+.btn-hover-index:focus,
 .shop-button-home,
 .btn-lime,
 #delivery-banner,
@@ -17,13 +21,18 @@ body {
     color: violet !important;
     background-color: black !important;
 }
+    
+.btn-hover-index{
+    background: violet!important;
+    color: black !important;
+}
 
 .dropdown-container{
     position: relative;
 }
 
 
-
+.fa-search,
 .dropdown-item,
 .text-color {
     color: violet !important;
@@ -75,6 +84,19 @@ body {
 
 .header-container {
     padding-top: 1rem;
+}
+
+.btn-hover-violet {
+    background: white;
+    color: black !important;
+    border: 1px solid black;
+}
+
+.btn-hover-violet:hover,
+.btn-hover-violet:active,
+.btn-hover-violet:focus {
+    background: black;
+    color: violet !important;
 }
 
 
