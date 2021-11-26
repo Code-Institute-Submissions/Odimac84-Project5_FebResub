@@ -45,7 +45,11 @@
     {% include 'includes/desktop-nav.html' %}
 
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+        {% for message in messages %}
+            {% include 'includes/toasts/success_toast.html' %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
@@ -55,6 +59,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
 

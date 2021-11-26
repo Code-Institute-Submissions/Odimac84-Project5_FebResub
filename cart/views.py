@@ -8,6 +8,7 @@ def view_cart(request):
 
 def add_to_cart(request, item_id):
     
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
@@ -16,7 +17,8 @@ def add_to_cart(request, item_id):
         cart[item_id] += quantity
     else:
         cart[item_id] = quantity
-    
+        messages.success(request, f'{product.name} added to your cart')
+
     request.session['cart'] = cart
     return redirect(redirect_url)
 
