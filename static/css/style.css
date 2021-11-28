@@ -10,23 +10,6 @@ body {
     color: #555;
 }
 
-
-.btn-hover-index:hover,
-.btn-hover-index:active,
-.btn-hover-index:focus,
-.shop-button-home,
-.btn-lime,
-#delivery-banner,
-#topnav {
-    color: violet !important;
-    background-color: black !important;
-}
-    
-.btn-hover-index{
-    background: violet!important;
-    color: black !important;
-}
-
 .dropdown-container{
     position: relative;
 }
@@ -78,6 +61,7 @@ body {
     overflow: hidden;
 }
 
+
 .bg-account{
     background-color: rgba(0, 0, 0, 0.8)
 }
@@ -86,10 +70,41 @@ body {
     padding-top: 1rem;
 }
 
+/* BUTTONS CSS  */
+
+.btn-hover-index:hover,
+.btn-hover-index:active,
+.btn-hover-index:focus,
+.shop-button-home,
+.btn-lime,
+#delivery-banner,
+#topnav {
+    color: violet !important;
+    background-color: black !important;
+}
+    
+.btn-hover-index{
+    background: violet!important;
+    color: black !important;
+}
+
 .btn-hover-violet {
     background: white;
     color: black !important;
     border: 1px solid black;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; 
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .btn-hover-violet:hover,
@@ -98,10 +113,15 @@ body {
     background: black;
     color: violet !important;
 }
+
+/* CART LINKS CSS */
+
 .update-link,
 .remove-link{
     cursor: pointer;
 }
+
+/* TOAST AND MESSAGE CSS */
 
 .custom-toast {
     overflow: visible;
@@ -118,6 +138,19 @@ body {
     z-index: 99999999999;
 }
 
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.img-size-toast {
+    float: left;
+    width:  5rem;
+    height: 5rem;
+    object-fit: cover;
+    overflow: hidden;
+}
+
 /* remove the arrows inside the quantity selectors */
 
 input::-webkit-outer-spin-button,
@@ -131,6 +164,8 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+
+/* MEDIA QURIES */
 
 
 @media (max-width: 991px) {
