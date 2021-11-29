@@ -44,7 +44,6 @@ body {
 	z-index: -1;
 }
 
-
 .img-size {
     float: left;
     width:  14rem;
@@ -53,12 +52,18 @@ body {
     overflow: hidden;
 }
 
+.img-size-cart {
+    float: left;
+    width:  14rem;
+    height: auto;
+    object-fit: cover;
+}
+
 .img-size-detail {
     float: left;
     width:  30rem;
-    height: 30rem;
-    object-fit: cover;
-    
+    height: auto;
+    object-fit: cover;   
 }
 
 
