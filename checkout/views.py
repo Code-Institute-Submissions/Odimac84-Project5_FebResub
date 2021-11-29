@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
+from .forms import OrderForm
+
 # Create your views here.
 def checkout(request):
     cart = request.session.get('cart', {})
@@ -12,7 +14,7 @@ def checkout(request):
 
     template = 'checkout/checkout.html'
     context = {
-        'order_form': order_form
+        'order_form': order_form,
 
     }
 
