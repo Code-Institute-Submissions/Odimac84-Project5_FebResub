@@ -78,7 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.contexts_processors.media',
+                'django.template.context_processors.media',
                 'cart.context.cart_contents',
             ],
             'builtins': [
