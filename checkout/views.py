@@ -3,12 +3,16 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from cart.contexts import cart_contents
+from cart.context import cart_contents
 
 import stripe
 
-# Create your views here.
+
 def checkout(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
+
+
     cart = request.session.get('cart', {})
     if not cart:
         message.error(request, "You havent added anything in your cart.")
@@ -17,14 +21,22 @@ def checkout(request):
     current_cart = cart_contents(request)
     total = current_cart['grand_total']
     stripe_total = round(total * 100)
-    
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
+
     order_form = OrderForm()
+
+    if not stripe_public_key:
+        message.warning(request, 'missing stripe public key. \ Check that this is set in the enviroment.')
 
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_51JukkFCPkuFDNEn36LyaWvCXlfcTxHkHpvLtxwh3vXvZ2iBuaIwhXMhwpwzdu8AkDVFJz7G1mY6UFIOnMD2p6iMO00vQ8OyB91',
-        'client_secret': 'test client secret',
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
