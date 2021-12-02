@@ -1,5 +1,10 @@
 from django.http import HttpResponse
 
+from .models import Order, OrderLineItem
+from products.models import Product
+
+import json
+import time
 
 class StripeWH_Handler:
     
@@ -16,14 +21,15 @@ class StripeWH_Handler:
 
         intent = event.data.object
         pid = intent.id
-        cart = intent.metadata.cartsave_info = intent.metadata.save_info
+        cart = intent.metadata.cart
+        save_info = intent.metadata.save_info
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
-        grand_total = round(intent.data.charges[0].amount /100, 2)
+        grand_total = round(intent.charges.data[0].amount /100, 2)
 
-        for field, value in shipping_details.adress.items():
+        for field, value in shipping_details.address.items():
             if value == "":
-                shipping_details.adress[field] = None
+                shipping_details.address[field] = None
         
         order_exists = False
         attempt = 1
