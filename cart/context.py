@@ -20,6 +20,10 @@ def cart_contents(request):
             'product': product,
         })
 
+    """
+    calculating the delivery cost based on whats in the cart.
+    """
+    
     if total < settings.FREE_DELIVERY_SUM:
         delivery = total * Decimal(settings.STANDARD_SHIPPING / 100)
         free_delivery_left = settings.FREE_DELIVERY_SUM - total

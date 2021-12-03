@@ -11,7 +11,9 @@ class OrderForm(forms.ModelForm):
                   'county',)
 
     def __init__(self, *args, **kwargs):
-       
+        """ 
+        adding placeholders to forms, autofocus on first field and removes placeholder when choosen 
+        """
         super().__init__(*args, **kwargs)
         placeholders = {
             'full_name': 'Full Name',

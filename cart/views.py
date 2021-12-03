@@ -7,7 +7,8 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
-    
+    #adding a specified quantity of an item to the cart
+
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -25,7 +26,8 @@ def add_to_cart(request, item_id):
 
 
 def change_cart(request, item_id):
-    
+    #Adjust the quantity of a product
+
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
@@ -43,6 +45,7 @@ def change_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
+   #removing an item from the cart
    
     try:
         product = get_object_or_404(Product, pk=item_id)
