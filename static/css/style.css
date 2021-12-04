@@ -45,7 +45,9 @@ body {
 }
 
 .img-size {
-    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
     width:  14rem;
     height: 14rem;
     object-fit: cover;
