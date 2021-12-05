@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-from .models import UserProfile
-from .forms import UserProfileForm
 from django.contrib import messages
 
+from .models import UserProfile
+from .forms import UserProfileForm
+
+
 def profile(request):
-    # Displaying the user profile
+    """ Displaying the user profile """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == "POST":

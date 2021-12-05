@@ -121,18 +121,20 @@
                 <h5 class="home-font my-1">Free delivery on all orders over ${{ free_delivery_sum }}!</h5>
             </div>
         </div>
-        <form class="col-12 col-lg-4 my-auto py-1 py-lg-0 mr-2 offset-lg-4" method="GET" action="{% url 'products' %}">
-            <div class="input-group w-100">
-                <input class="form-control border border-lime" type="text" name="search" placeholder="Search our site">
-                <div class="input-group-append">
-                    <button class="form-control btn btn-lime border border-lime text-color " type="submit">
-                        <span class="icon text-color">
-                            <i class="fas fa-search "></i>
-                        </span>
-                    </button>
+        <div class ="bg-account">
+            <form class="col-12 col-lg-4 my-auto py-1 py-lg-0 mr-2 offset-lg-4 w-100 " method="GET" action="{% url 'products' %}">
+                <div class="input-group w-100">
+                    <input class="form-control border border-lime" type="text" name="search" placeholder="Search our site">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-lime border border-lime text-color " type="submit">
+                            <span class="icon text-color">
+                                <i class="fas fa-search "></i>
+                            </span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </header>
 
     {% if messages %}
