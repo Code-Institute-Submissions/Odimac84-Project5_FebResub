@@ -4,6 +4,8 @@ from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
 
+from checkout.models import Order
+
 
 def profile(request):
     """ Displaying the user profile """
@@ -13,7 +15,8 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile has been updated with your new information, Thank you!')
+            messages.success(
+                request, 'Profile has been updated with your new information, Thank you!')
 
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -24,4 +27,21 @@ def profile(request):
         'orders': orders,
         'on_profile_page': True,
     }
+    return render(request, template, context)
+
+
+def order_history(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'This is an old confirmation for {order_number}'
+        'You should have been sent a confirmation mail about this at the date of purchase'
+    ))
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
+
     return render(request, template, context)

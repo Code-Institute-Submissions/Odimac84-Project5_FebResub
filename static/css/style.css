@@ -11,12 +11,12 @@ body {
 }
 
 
-.dropdown-container{
+.dropdown-container {
     position: relative;
 }
 
 
-.no-padding-margin{
+.no-padding-margin {
     margin: 0;
     padding: 0;
 }
@@ -41,20 +41,20 @@ body {
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: rgba(255, 255, 255, 0.95);
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: -1;
 }
 
 .img-size {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    width:  14rem;
+    width: 14rem;
     height: 14rem;
     object-fit: cover;
     overflow: hidden;
@@ -62,20 +62,20 @@ body {
 
 .img-size-cart {
     float: left;
-    width:  14rem;
+    width: 14rem;
     height: auto;
     object-fit: cover;
 }
 
 .img-size-detail {
     float: left;
-    width:  30rem;
+    width: 30rem;
     height: auto;
-    object-fit: cover;   
+    object-fit: cover;
 }
 
 
-.bg-account{
+.bg-account {
     background-color: rgba(0, 0, 0, 0.8)
 }
 
@@ -92,15 +92,14 @@ body {
 .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-  
+
 .navbar-dark .navbar-toggler {
-    border-color: rgb(238,130,238);
-} 
+    border-color: rgb(238, 130, 238);
+}
 
 .btn-hover-violet:hover,
 .btn-hover-violet:active,
-.btn-hover-violet:focus
-.btn-hover-index:hover,
+.btn-hover-violet:focus .btn-hover-index:hover,
 .btn-hover-index:active,
 .btn-hover-index:focus,
 .shop-button-home,
@@ -111,15 +110,14 @@ body {
     background-color: black !important;
 }
 
-.btn-hover-index{
-    background: violet!important;
+.btn-hover-index {
+    background: violet !important;
     color: black !important;
 }
 
-.btn-hover-violet
-.btn-outline-black {
+.btn-hover-violet .btn-outline-black {
     background: white;
-    color: black !important; 
+    color: black !important;
     border: 1px solid black;
 }
 
@@ -134,7 +132,7 @@ body {
 /* CART LINKS CSS */
 
 .update-link,
-.remove-link{
+.remove-link {
     cursor: pointer;
 }
 
@@ -160,9 +158,10 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 .img-size-toast {
     float: left;
-    width:  5rem;
+    width: 5rem;
     height: 5rem;
     object-fit: cover;
     overflow: hidden;
@@ -172,13 +171,13 @@ body {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 
@@ -186,22 +185,22 @@ input[type=number] {
 
 
 @media (max-width: 991px) {
-    
+
     body {
         padding-top: 0px;
     }
-    
-    #delivery-banner.home-font{
+
+    #delivery-banner.home-font {
         font-size: 80%;
     }
 
     .dropdown-menu {
         background-color: black !important;
         position: absolute;
-        top: 100%; 
+        top: 100%;
         right: 0;
         margin-right: 35%;
-      }
+    }
 
 }
 
@@ -209,8 +208,8 @@ input[type=number] {
     .dropdown-menu {
         background-color: black !important;
         position: absolute;
-        top: 100%; 
+        top: 100%;
         right: 0;
         margin-left: 180px;
-      }
+    }
 }
