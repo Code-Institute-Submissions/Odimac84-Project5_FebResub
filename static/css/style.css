@@ -77,6 +77,10 @@ body {
     padding-top: 1rem;
 }
 
+#search::placeholder {
+    color: #aab7c4;
+}
+
 /* BUTTONS CSS  */
 
 .btn-hover-index:hover,
