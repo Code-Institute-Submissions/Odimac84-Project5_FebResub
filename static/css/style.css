@@ -3,17 +3,23 @@ html {
 }
 
 body {
-    padding-top: 80px;
+    padding: 0px;
     background: url('/media/home-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     color: #555;
 }
 
+
 .dropdown-container{
     position: relative;
 }
 
+
+.no-padding-margin{
+    margin: 0;
+    padding: 0;
+}
 
 .fa-search,
 .dropdown-item,
@@ -83,6 +89,17 @@ body {
 
 /* BUTTONS CSS  */
 
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+  
+.navbar-dark .navbar-toggler {
+    border-color: rgb(238,130,238);
+} 
+
+.btn-hover-violet:hover,
+.btn-hover-violet:active,
+.btn-hover-violet:focus
 .btn-hover-index:hover,
 .btn-hover-index:active,
 .btn-hover-index:focus,
@@ -93,18 +110,13 @@ body {
     color: violet !important;
     background-color: black !important;
 }
-    
+
 .btn-hover-index{
     background: violet!important;
     color: black !important;
 }
 
-.btn-hover-violet {
-    background: white;
-    color: black !important;
-    border: 1px solid black;
-}
-
+.btn-hover-violet
 .btn-outline-black {
     background: white;
     color: black !important; 
@@ -118,12 +130,6 @@ body {
     color: white !important;
 }
 
-.btn-hover-violet:hover,
-.btn-hover-violet:active,
-.btn-hover-violet:focus {
-    background: black;
-    color: violet !important;
-}
 
 /* CART LINKS CSS */
 
@@ -182,7 +188,7 @@ input[type=number] {
 @media (max-width: 991px) {
     
     body {
-        padding-top: 320px;
+        padding-top: 0px;
     }
     
     #delivery-banner.home-font{
