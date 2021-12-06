@@ -88,7 +88,7 @@
                                 aria-labelledby="navbarDropdownMenuLink">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
-                                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                        <a href="{% url 'add_product' %}" class="dropdown-item">Add product</a>
                                     {% endif %}
                                 <a class="dropdown-item" href="{% url 'profile' %}">My Pages</a>
                                 <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
