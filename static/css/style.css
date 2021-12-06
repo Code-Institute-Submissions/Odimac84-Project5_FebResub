@@ -23,6 +23,7 @@ body {
 
 .fa-search,
 .dropdown-item,
+.dropdown-item a,
 .text-color {
     color: violet !important;
 }
