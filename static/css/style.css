@@ -74,9 +74,13 @@ body {
     object-fit: cover;
 }
 
+.banner-bg{
+    background-color: rgba(238, 130, 238, 0.4);
+}
 
 .bg-account {
-    background-color: rgba(0, 0, 0, 0.8)
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid violet; 
 }
 
 .header-container {

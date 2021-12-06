@@ -56,7 +56,7 @@
                     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon dropdown-item"></span>
                 </button>
-                <div class="collapse navbar-collapse offset-1" id="navbarTogglerDemo01">
+                <div class="collapse navbar-collapse my-auto offset-1" id="navbarTogglerDemo01">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="nav-item dropdown">
                             <a class="logo-font font-weight-bold nav-link text-color" href="#" id="all-products-link"
@@ -79,7 +79,7 @@
                             </div>
                         </li>
                     </ul>
-                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <ul class="list-inline list-unstyled my-auto text-center text-lg-right my-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-color" href="#" id="navbarDropdownMenuLink"
                                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Members
@@ -87,6 +87,9 @@
                             <div class="dropdown-menu dropdown-menu-right col-12 col-lg-1 col-sm-1 my-auto py-1 py-lg-0"
                                 aria-labelledby="navbarDropdownMenuLink">
                                 {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                    {% endif %}
                                 <a class="dropdown-item" href="{% url 'profile' %}">My Pages</a>
                                 <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                                 {% else %}
@@ -96,7 +99,7 @@
                             </div>
                         </li>
                     </ul>
-                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <ul class="list-inline list-unstyled my-auto text-center text-lg-right my-0">
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'view_cart' %}">
@@ -121,7 +124,7 @@
                 <h5 class="home-font my-1">Free delivery on all orders over ${{ free_delivery_sum }}!</h5>
             </div>
         </div>
-        <div class ="bg-account">
+        <div class ="banner-bg">
             <form class="col-12 col-lg-4 my-auto py-1 py-lg-0 mr-2 offset-lg-4 w-100 " method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
                     <input class="form-control border border-lime" type="text" name="search" placeholder="Search our site">
@@ -140,17 +143,17 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/error_toast.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/warning_toast.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/success_toast.html' %}
-        {% else %}
-        {% include 'includes/toasts/info_toast.html' %}
-        {% endif %}
-        {% endwith %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/error_toast.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/warning_toast.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/success_toast.html' %}
+                {% else %}
+                    {% include 'includes/toasts/info_toast.html' %}
+                {% endif %}
+            {% endwith %}
         {% endfor %}
     </div>
     {% endif %}
