@@ -77,20 +77,28 @@ This project is my fourth and final Milestone Project in the Code Institute's Fu
 
 Following these user stories, wireframes were drawn to provide a starting point and guidance throughout the development process.
 
-![ Wireframes]()
+![ Wireframes](readmefiles/wire_landing.jpg)
+![ Wireframes](readmefiles/wire_profile.jpg)
+![ Wireframes](readmefiles/wire_products.jpg)
+![ Wireframes](readmefiles/wire_checkout.jpg)
+![ Wireframes](readmefiles/wire_order.jpg)
+![ Wireframes](readmefiles/wire_pageflow.jpg)
 
 
 ### Data Structure
 
-Before starting the development of the application, its models and their relationships were delineated:
+Before starting the development of the application, its models and their relationships were delineated.
+This was as always just a rough plan on how i planned it in my mind and as the project move forward some things changed and some things stayed as i planned it. 
 
-![Models]()
+![Models](readmefiles/model_flow.jpg)
 
 ### Design
 
 #### Colors
 
+As im building a page aimed to catch the eye of the female gaming world, ive choosen to use colors that more often appeal to that audience. Still i needed to keep the readability on the site so therfore i went to use the violet coloron black and use these colors in diffrent varieties. I used them both with opacity to be able to hightligt the information i want to get to the user. the white behind the products is used so that the products is lifted and shown in all its glory, since this is the main purpose off the site itself. 
 
+![Color contrast](readmefiles/contrast.jpg)
 
 ## Features
 
@@ -101,6 +109,8 @@ Before starting the development of the application, its models and their relatio
 -   The first view that meets the customer is a simple design with the navbar and a button to go to the products. 
 -   the navbar opens up the possibility to login/register or sort through the products if wished. 
 
+
+![Landing page](readmefiles/)
 #### Product Listing
 
 The shop offers a number of solutions to make specific products easier to list and find.
@@ -109,6 +119,7 @@ The shop offers a number of solutions to make specific products easier to list a
 -   A product listing can be sorted by price, name, and category or rating
 -   Through the serach function they can search if a keyword appers in description or name. 
 
+![Product page page](readmefiles/)
 #### Product View
 
 -   A user can view the details of a product, which includes the following:
@@ -121,7 +132,7 @@ The shop offers a number of solutions to make specific products easier to list a
     -   Category
 -   Users can choose a quantity and add it to their cart
 
-
+![product details](readmefiles/)
 #### User Account
 
 The creation of the account requires a valid email, a user name, and a password.
@@ -137,6 +148,7 @@ The creation of an account gives access to the following features:
 -   Quantities for the products can be adjusted or removed from within the shopping cart
 -   A user can choose to proceed to checkout
 
+![Cart](readmefiles/)
 #### Payment
 
 -   The checkout details and delivery information are pre-filled with the information provided in the user's profile, but can be edited.
@@ -214,14 +226,13 @@ To deploy pcgeeks to Heroku, use the following steps:
 -   JavaScript / jQuery
 -   Python
 -   Django
--   Fixture files are written by myself and my brother.
+-   Fixture files are written by myself and my brother [Hampus Nilsson](https://github.com/Knasten).
 
 ## Tools Used
 
 -   Github
 -   Balsamiq
 -   Heroku
--   [Google Fonts](https://fonts.google.com/)
 -   [Font Awesome](https://fontawesome.com/)
 -   [TinyJPG](https://tinyjpg.com/) used to compress all images
 
@@ -237,5 +248,5 @@ To deploy pcgeeks to Heroku, use the following steps:
 
 -   This site is meant for educational use.
 -   [Felipe Alarcon](https://github.com/fandressouza) for his helpful feedback and advice, and constant availability as a mentor
--   
+-   Thanks to [Hampus Nilsson](https://github.com/Knasten) for both the help along the way and for the exchange of information, aswell as the good work on building the fixture files together. 
 -  

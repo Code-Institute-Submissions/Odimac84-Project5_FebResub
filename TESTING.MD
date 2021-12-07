@@ -106,6 +106,24 @@ These tests were performed on the following devices and browsers:
 
 ## Bugs Found
 
--   
+-   Toaster brought in the HTML from the page it was supposed to show. 
+    
+    FIXED, the problem was that a div wasent fully closed in the toast file.
 
--   
+-   Pictures wasent showing as intended. 
+
+    FIXED, typo caused the code not to be able to find the proper URL to display it from.
+
+-   Navbar wasent showing the colors of one of the dropdowns.
+
+    FIXED, Again a div that wasent placed as intended when i wrote the code.
+
+- Pictures wasent showing after loading the fixtures.
+
+    FIXED, typo of the extension of the fileformat. jpg was mistaken for jpeg.
+
+- Got error when showing prices
+
+    FIXED, Misscalculated the DecimalField so it didnt take enough digits.
+
+Other then these bugs there been some minor ones that been fixed along the way. but as far as i can see i cant find any major bugs that causes any problems for the site. 
