@@ -8,8 +8,8 @@ class UserProfileForm(forms.ModelForm):
         exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
-        """ 
-        adding placeholders to forms, autofocus on first field and removes placeholder when choosen 
+        """
+        adding placeholders to forms, autofocus on first field and removes placeholder when choosen
         """
         super().__init__(*args, **kwargs)
         placeholders = {

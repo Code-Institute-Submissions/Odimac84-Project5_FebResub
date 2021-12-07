@@ -2,12 +2,13 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from products.models import Product
 from django.contrib import messages
 
+
 def view_cart(request):
     return render(request, 'cart/cart.html')
 
 
 def add_to_cart(request, item_id):
-    #adding a specified quantity of an item to the cart
+    # adding a specified quantity of an item to the cart
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -26,7 +27,7 @@ def add_to_cart(request, item_id):
 
 
 def change_cart(request, item_id):
-    #Adjust the quantity of a product
+    # Adjust the quantity of a product
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -38,15 +39,14 @@ def change_cart(request, item_id):
     else:
         cart.pop(item_id)
         messages.success(request, f'{product.name} has been removed from your cart')
-    
+
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
 
-
 def remove_from_cart(request, item_id):
-   #removing an item from the cart
-   
+    # removing an item from the cart
+
     try:
         product = get_object_or_404(Product, pk=item_id)
         cart = request.session.get('cart', {})

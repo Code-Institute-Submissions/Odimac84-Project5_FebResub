@@ -3,13 +3,14 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def cart_contents(request):
 
     cart_items = []
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
-    
+
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
@@ -23,7 +24,7 @@ def cart_contents(request):
     """
     calculating the delivery cost based on whats in the cart.
     """
-    
+
     if total < settings.FREE_DELIVERY_SUM:
         delivery = total * Decimal(settings.STANDARD_SHIPPING / 100)
         free_delivery_left = settings.FREE_DELIVERY_SUM - total

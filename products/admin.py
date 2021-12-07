@@ -14,10 +14,11 @@ class ProductAdmin(admin.ModelAdmin):
         'model_id',
     )
 
-    ordering =('sku',)
+    ordering = ('sku',)
+
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display= (
+    list_display = (
         'friendly_name',
         'name',
     )
