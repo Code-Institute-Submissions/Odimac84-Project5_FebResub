@@ -161,9 +161,9 @@ Additionally, all code was validated in the following ways:
 
 **HTML** - All pages have been successfully run through the [W3C HTML Validator](https://validator.w3.org/) to make sure no problems found within HTML code.
 
-**CSS** - CSS validation with the [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/)
+**CSS** - CSS validation with the [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) came back with nothing to mark upon.
 
-**Python** - All Python code was checked with the [PEP8 online validator](http://pep8online.com/) and is PEP8 compliant, aside from line length flags, which were left for code readability.
+**Python** - All Python code was checked with the [PEP8 online validator](http://pep8online.com/) and is PEP8 compliant, aside from line length flags, which were left for code readability. fixes found were trailing whitelines or missing double lines between classes mostly.
 
 ## Deployment
 
