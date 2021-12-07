@@ -60,12 +60,16 @@ body {
     overflow: hidden;
 }
 
-.img-size-cart {
-    float: left;
-    width: 7vh;
+.product-mobile-img {
+    width: 20%;
     height: auto;
-    object-fit: cover;
 }
+
+.product-cart-img {
+    width:  8rem;
+    height: auto;
+}
+
 
 .img-size-detail {
     float: left;
