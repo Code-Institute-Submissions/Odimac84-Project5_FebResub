@@ -126,4 +126,8 @@ These tests were performed on the following devices and browsers:
 
     FIXED, Misscalculated the DecimalField so it didnt take enough digits.
 
+- Wasent able to checkout when using desktop
+
+    FIXED, had forgot to put in URLs for the checkout in the view for big screens.
+
 Other then these bugs there been some minor ones that been fixed along the way. but as far as i can see i cant find any major bugs that causes any problems for the site. 
