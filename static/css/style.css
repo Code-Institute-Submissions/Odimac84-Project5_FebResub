@@ -54,22 +54,22 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    width: 15vh;
-    height: 15vh;
+    width: 14rem;
+    height: 14rem;
     object-fit: cover;
     overflow: hidden;
 }
 
 .img-size-cart {
     float: left;
-    width: 7vh;
+    width: 14rem;
     height: auto;
     object-fit: cover;
 }
 
 .img-size-detail {
     float: left;
-    width: 30vh;
+    width: 30rem;
     height: auto;
     object-fit: cover;
 }
@@ -204,6 +204,30 @@ input[type=number] {
         top: 100%;
         right: 0;
         margin-right: 35%;
+    }
+
+    .img-size {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        width: 15vh;
+        height: 15vh;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    .img-size-cart {
+        float: left;
+        width: 7vh;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .img-size-detail {
+        float: left;
+        width: 30vh;
+        height: auto;
+        object-fit: cover;
     }
 
 }
