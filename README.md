@@ -1,108 +1,241 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# PC GEEKS 
 
-Welcome Odimac84,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- [UX](#ux)
+  - [Project Goal](#project-goal)
+  - [User Stories](#user-stories)
+    - [User Stories for Customers](#user-stories-for-customers)
+    - [User Stories for Shop Administrators](#user-stories-for-shop-administrators)
+  - [Wireframes](#wireframes)
+  - [Data Structure](#data-structure)
+  - [Design](#design)
+    - [Colors](#colors)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+    - [Home Page](#home-page)
+    - [Product Listing](#product-listing)
+    - [Product View](#product-view)
+    - [Producers Page](#producers-page)
+    - [User Account](#user-account)
+    - [Shopping Cart](#shopping-cart)
+    - [Payment](#payment)
+    - [Administrator features](#administrator-features)
+  - [Features Left to implement](#features-left-to-implement)
+- [Testing](#testing)
+- [Deployment](#deployment)
+  - [Deployment to Heroku](#deployment-to-heroku)
+- [Technologies](#technologies)
+- [Tools Used](#tools-used)
+- [Credits](#credits)
+  - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
 
 ---
 
-Happy coding!
+Beer WareHaus is an online shop for a hypothetical beer import and distribution company in Norway. The purpose of the site is to provide a simple intuitive ways for managers of bars and restaurants to browse and purchase products they wish to serve.
+Additionally the site provides a number of tools allowing the shop owner to easily manage the products in the shop.
+
+![ Responsive Screens]()
+
+The site has been deployed to Heroku and can be viewed [here](https://pcgeeks.herokuapp.com/).
+
+## UX
+
+### Project Goal
+
+This project is my fourth and final Milestone Project in the Code Institute's Fullstack Development program. I made a e-commerce that reach out for women that are into gaming. THe site id fully functional and to get it up and running as a usable site the only thing that missing is a few setups for stripe and an account on stripe to recieve the payment. 
+
+### User Stories
+
+#### User Stories for Customers
+
+| **As a customer I would like to** | **So that I can**                             |
+| -------------------------------------------------- | --------------------------------------------- |
+| Browse products                                    | purchase what I need                          |
+| Search products                                    | find something specific                       |
+| Filter products                                    | compare the offerings                         |
+| See offerings by a specific producer               | get an idea of the producer's offer           |
+| Buy a product                                      | get the parts im looking for                  |
+| Pay using a card                                   | complete my purchase                          |
+| Create a profile                                   | save my information and review past orders    |
+| Update my profile information                      | if i move houses and chage shipping info      |
+| See my shopping cart before paying                 | know the cost and content before the purchase |
+| Update my shopping cart                            | make decisions before the purchase            |
+| See details about a product                        | make an informed purchasing decision          |
+| View my order history                              | be reminded of previous purchases             |
+| Receive an email confirmation about my order       | have archived information about it            |
+| Contact the seller                                 | know about the status of an order             |
+
+#### User Stories for Shop Administrators
+
+| **As an administrator I would like to**     | **So that I can**                                |
+| ------------------------------------------- | ------------------------------------------------ |
+| Add/Update/Remove a product                 | keep the store up to date                        |
+| Add/Update/Remove a producer                | keep users informed about the latest information |
+| Receive orders from customers in my mailbox | fulfill the orders                               |
+
+### Wireframes
+
+Following these user stories, wireframes were drawn to provide a starting point and guidance throughout the development process.
+
+![ Wireframes]()
+
+
+### Data Structure
+
+Before starting the development of the application, its models and their relationships were delineated:
+
+![Models]()
+
+### Design
+
+#### Colors
+
+
+
+## Features
+
+### Existing Features
+
+#### Home Page
+
+-   The first view that meets the customer is a simple design with the navbar and a button to go to the products. 
+-   the navbar opens up the possibility to login/register or sort through the products if wished. 
+
+#### Product Listing
+
+The shop offers a number of solutions to make specific products easier to list and find.
+
+-   A search function lets users find specific products
+-   A product listing can be sorted by price, name, and category or rating
+-   Through the serach function they can search if a keyword appers in description or name. 
+
+#### Product View
+
+-   A user can view the details of a product, which includes the following:
+    -   Product name
+    -   Image
+    -   Producer
+    -   Description
+    -   Rating
+    -   Price
+    -   Category
+-   Users can choose a quantity and add it to their cart
+
+
+#### User Account
+
+The creation of the account requires a valid email, a user name, and a password.
+The creation of an account gives access to the following features:
+
+-   Update of profile information
+-   View the account's order history
+
+#### Shopping Cart
+
+-   Items chosen for purchase are placed in the shopping cart
+-   The shopping cart displays subtotals for items placed in it and a grand total cost
+-   Quantities for the products can be adjusted or removed from within the shopping cart
+-   A user can choose to proceed to checkout
+
+#### Payment
+
+-   The checkout details and delivery information are pre-filled with the information provided in the user's profile, but can be edited.
+-   A summary of the order is displayed on the checkout page
+-   Payment is made by card using [Stripe](https://stripe.com/)
+
+#### Administrator features
+
+-   On product pages, an administrator has additional links to edit a products information or remove it from the shop
+-   An administrator can via members tab add a new product to the shop manually
+-   The administraor has the option of updating or deleting a product in either the detailed view of a product or in the product overview.
+
+### Features Left to implement
+
+-   For authenticated users, the option should be added to renew an order if they want.
+
+## Testing
+
+Testing was done manually throughout the development process. The full rundown of the testing can be found [here](TESTING.md).
+
+Additionally, all code was validated in the following ways:
+
+**HTML** - All pages have been successfully run through the [W3C HTML Validator](https://validator.w3.org/) to make sure no problems found within HTML code.
+
+**CSS** - CSS validation with the [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/)
+
+**Python** - All Python code was checked with the [PEP8 online validator](http://pep8online.com/) and is PEP8 compliant, aside from line length flags, which were left for code readability.
+
+## Deployment
+
+Before deploying the application, ensure the following are installed:
+
+-   Python 3
+-   PIP
+-   Git
+
+The application relies on the following services, and accounts will have to be created for them:
+
+-   [Amazon AWS](https://aws.amazon.com/)
+-   [Stripe](https://stripe.com/)
+
+
+### Deployment to Heroku
+
+To deploy pcgeeks to Heroku, use the following steps:
+
+1. In Heroku create a new application.
+2. From the heroku dashboard of your application, click on "Deploy", then "Deployment method" and select GitHub to connect the application to your github repository
+3. In the Heroku Resources tab, navigate to the Add-Ons section and search for Heroku Postgres. The hobby level can be selected for this application.
+4. Click on the "settings" tab and on the button labelled "Reveal Config Vars". The Postgres addon will have created a link to the Postgres database.
+5. Add the following configuration variables to the application:
+
+    | **VARIABLE**          | **VALUE**                                                          |
+    | --------------------- | ------------------------------------------------------------------ |
+    | AWS_ACCESS_KEY_ID     | The key provided by AWS                                            |
+    | AWS_SECRET_ACCESS_KEY | The secret key provided by AWS                                     |
+    | DATABASE_URL          | Postgres Database url provided by the addon                        |
+    | DEFAULT_ORDER_EMAIL   | The email address orders will go to                                |
+    | EMAIL_HOST            | The smtp host for the email                                        |
+    | EMAIL_HOST_PASSWORD   | The password associated with the address that will send out emails |
+    | EMAIL_HOST_USER       | The address that will send out emails                              |
+    | SECRET_KEY            | Your Django secret key                                             |
+    | STRIPE_PUBLIC_KEY     | The public key provided by Stripe                                  |
+    | STRIPE_SECRET_KEY     | The secret key provided by Stripe                                  |
+    | STRIPE_WH_SECRET      | The webhook secret provided by Stripe                              |
+    | USE_AWS               | True                                                               |
+
+6. In the Heroku dashboard, deploy the application.
+7. To view the site, click "View App"
+
+## Technologies
+
+-   HTML
+-   CSS
+-   JavaScript / jQuery
+-   Python
+-   Django
+-   Fixture files are written by myself and my brother.
+
+## Tools Used
+
+-   Github
+-   Balsamiq
+-   Heroku
+-   [Google Fonts](https://fonts.google.com/)
+-   [Font Awesome](https://fontawesome.com/)
+-   [TinyJPG](https://tinyjpg.com/) used to compress all images
+
+## Credits
+
+### Media
+
+-   Icon for "No photo available" image from [Flat Icons](https://www.flaticon.com/authors/flat-icons)
+-   Information for the fixture files are picked up from BestBuy US and Amazon using stock pictures 
+    from the manufactors 
+
+### Acknowledgements
+
+-   This site is meant for educational use.
+-   [Felipe Alarcon](https://github.com/fandressouza) for his helpful feedback and advice, and constant availability as a mentor
+-   
+-  
