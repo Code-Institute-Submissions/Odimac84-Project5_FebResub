@@ -54,22 +54,22 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    width: 14rem;
-    height: 14rem;
+    width: 15vh;
+    height: 15vh;
     object-fit: cover;
     overflow: hidden;
 }
 
 .img-size-cart {
     float: left;
-    width: 14rem;
+    width: 7vh;
     height: auto;
     object-fit: cover;
 }
 
 .img-size-detail {
     float: left;
-    width: 30rem;
+    width: 30vh;
     height: auto;
     object-fit: cover;
 }

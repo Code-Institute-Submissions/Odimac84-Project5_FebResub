@@ -38,7 +38,7 @@
 
                     {% for item in cart_items %}
                     <tr>
-                        <td class="p-3 w-25">
+                        <td  class="p-3 w-25 col-2">
                             {% if item.product.image %}
                             <img class="img-fluid rounded img-size-cart" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
@@ -46,7 +46,7 @@
                             {% endif %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0"><strong>{{ item.product.name|truncatechars:20 }}</strong></p>
                             <p class="my-0">SKU: {{ item.product.sku|upper }}</p>
                         </td>
                         <td class="py-3">
