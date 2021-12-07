@@ -96,7 +96,7 @@
                             </div>
                         </td>
                         <td class="py-5">${{ item.product.price }}</td>
-                        <td class="py-5">${{ item.product.price }}</td>
+                        <td class="py-5">${{ item.product.price | calc_subtotal:item.quantity }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -173,13 +173,13 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <a class="update-product text-info ms-3 mt-3"><small>Update</small></a>
-                        <a class="text-danger remove-product me-3 mt-3" id="remove_{{ item.item_id }}">
+                        <a class="update-link text-info ms-3 mt-3"><small>Update</small></a>
+                        <a class="text-danger remove-item me-3 mt-3" id="remove_{{ item.item_id }}">
                             <i class="mx-1 fa-fw far fa-trash-alt"></i>
                         </a>
                     </div>
                 </form>
-                <div class="subtotal-container my-3"><span>${{ item.product.price }}</span></div>
+                <div class="my-3"><span>${{ item.product.price | calc_subtotal:item.quantity }}</span></div>
             </div>
         </div>
         <hr>

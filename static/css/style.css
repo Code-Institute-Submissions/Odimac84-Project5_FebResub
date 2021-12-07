@@ -61,8 +61,8 @@ body {
 }
 
 .product-mobile-img {
-    width: 20%;
-    height: auto;
+    width: auto;
+    height: 5vh;
 }
 
 .product-cart-img {
