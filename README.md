@@ -164,6 +164,10 @@ The creation of an account gives access to the following features:
 ### Features Left to implement
 
 -   For authenticated users, the option should be added to renew an order if they want.
+-   the choice of deleting a whole account by the users own choice. (GDPR states that you got the right to be forgotten)
+-   Help the user to start a warranty claim or a service directly from their profile page.
+-   Recommended products that goes well with the ones in the cart.
+-   Technical specifications for the products that being sold on the site.
 
 ## Testing
 
