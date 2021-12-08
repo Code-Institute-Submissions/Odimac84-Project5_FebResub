@@ -110,7 +110,7 @@ As im building a page aimed to catch the eye of the female gaming world, ive cho
 -   the navbar opens up the possibility to login/register or sort through the products if wished. 
 
 
-![Landing page](readmefiles/)
+![Landing page](readmefiles/landing.jpg)
 #### Product Listing
 
 The shop offers a number of solutions to make specific products easier to list and find.
@@ -119,7 +119,7 @@ The shop offers a number of solutions to make specific products easier to list a
 -   A product listing can be sorted by price, name, and category or rating
 -   Through the serach function they can search if a keyword appers in description or name. 
 
-![Product page page](readmefiles/)
+![Product page page](readmefiles/products.jpg)
 #### Product View
 
 -   A user can view the details of a product, which includes the following:
@@ -132,7 +132,7 @@ The shop offers a number of solutions to make specific products easier to list a
     -   Category
 -   Users can choose a quantity and add it to their cart
 
-![product details](readmefiles/)
+![product details](readmefiles/detail_product.jpg)
 #### User Account
 
 The creation of the account requires a valid email, a user name, and a password.
@@ -140,7 +140,7 @@ The creation of an account gives access to the following features:
 
 -   Update of profile information
 -   View the account's order history
-
+![Profile](readmefiles/profile.jpg)
 #### Shopping Cart
 
 -   Items chosen for purchase are placed in the shopping cart
@@ -148,13 +148,13 @@ The creation of an account gives access to the following features:
 -   Quantities for the products can be adjusted or removed from within the shopping cart
 -   A user can choose to proceed to checkout
 
-![Cart](readmefiles/)
+![Cart](readmefiles/cart.jpg)
 #### Payment
 
 -   The checkout details and delivery information are pre-filled with the information provided in the user's profile, but can be edited.
 -   A summary of the order is displayed on the checkout page
 -   Payment is made by card using [Stripe](https://stripe.com/)
-
+![Checkout](readmefiles/checkout.jpg)
 #### Administrator features
 
 -   On product pages, an administrator has additional links to edit a products information or remove it from the shop
@@ -245,12 +245,12 @@ To deploy pcgeeks to Heroku, use the following steps:
 ### Media
 
 -   Icon for "No photo available" image from [Flat Icons](https://www.flaticon.com/authors/flat-icons)
--   Information for the fixture files are picked up from BestBuy US and Amazon using stock pictures 
-    from the manufactors 
+-   Information for the fixture files are picked up from BestBuy US and Amazon using stock pictures from the manufactors, these are ok to use for educational purpose. 
+     
 
 ### Acknowledgements
 
--   This site is meant for educational use.
+-   This site is meant for educational use only.
 -   [Felipe Alarcon](https://github.com/fandressouza) for his helpful feedback and advice, and constant availability as a mentor
 -   Thanks to [Hampus Nilsson](https://github.com/Knasten) for both the help along the way and for the exchange of information, aswell as the good work on building the fixture files together. 
--  
+-  And last but not least thank you to CI for the best Walkthrough project off the entire course.

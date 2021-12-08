@@ -50,6 +50,7 @@
 -   Customer can choose to svae his information during checkout to his profile.
 -   Stripe payment works correctly, webhooks have been tested and received.
 -   An unsuccessful payment returns the reason for the failure.
+-   Email verification for orders sends out as intended.
 
 ## Profile
 
@@ -58,16 +59,12 @@
 -   The profile information updates successfully when this form is filled.
 -   The correct order history is displayed successfully.
 -   Clicking on the order number takes you to the receipt page to show you your receipt again.
+-   Creating a user has been tested and mails are beeing sent out as intended to verify your e-mail.
 
-## Contact
-
--   The contact form correctly sends information.
--   All required fields must be filled for the form to send.
--   Email field must contain a string formatted as an email.
 
 ## Administrative Tools
 
-Links to adminsitrative tools in the navigation can only be seen if a user is logged in as an administrator.
+Links to adminsitrative tools in the navigation can only be seen if a user is logged in as an superuser.
 
 ### Homepage
 
