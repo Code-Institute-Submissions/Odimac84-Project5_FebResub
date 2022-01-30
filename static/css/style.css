@@ -94,6 +94,14 @@ body {
     color: #aab7c4;
 }
 
+/* Mailchimp CSS  */
+
+#mc_embed_signup {
+    background:#fff; 
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif; 
+}
+
 /* BUTTONS CSS  */
 
 .navbar-dark .navbar-toggler-icon {
