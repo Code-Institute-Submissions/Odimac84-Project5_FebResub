@@ -30,3 +30,19 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+class Review(models.Model):
+    # Model for review on products
+    product = models.ForeignKey(
+        Product, related_name="review", on_delete=models.CASCADE)
+    title = models.CharField(max_length=50)
+    author = models.CharField(max_length=100)
+    review = models.TextField(max_length=1000, null=False, blank=False)
+    post_date = models.DateField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["post_date"]
+
+    def __str__(self):
+        return f"review {self.pk} by {self.author} on the {self.post_date}"
