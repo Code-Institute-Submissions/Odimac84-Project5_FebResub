@@ -28,7 +28,6 @@
         </div>
         <div class="col-12 col-md-8 col-lg-4 offset-md-2">
             <div class="product-details-container mb-5 mt-md-5">
-                {{ product.review.all }}
                 <h3 class="mb-0">{{ product.name }}</h3>
 
                 {% if product.rating %}
@@ -96,6 +95,13 @@
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
+                </form>
+                {{ product.review.all }}
+                <form action="{% url 'review' product.id %}" method= "POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-secondary btn-lg">Add comment
+                    </button>
                 </form>
             </div>
         </div>
