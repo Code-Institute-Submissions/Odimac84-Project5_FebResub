@@ -153,4 +153,5 @@ def createReview(request, product_id):
         review.save()         
         return redirect(request.META['HTTP_REFERER'])
     else:
-        return redirect('products')
+        success_url = "/".join(request.get_full_path().split('/')[:-1])
+        return redirect(success_url)
