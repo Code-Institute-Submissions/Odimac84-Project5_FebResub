@@ -42,7 +42,7 @@ class Review(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ["post_date"]
+        ordering = ["-post_date"]
 
     def __str__(self):
         return f"review {self.pk} by {self.author} on the {self.post_date}"
