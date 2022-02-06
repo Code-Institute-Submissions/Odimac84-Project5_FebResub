@@ -1,0 +1,6 @@
+Your customer {{ form.name }} got a question!
+
+{{ form.question }}
+
+{{ form.telephone }}
+{{ form.email }}

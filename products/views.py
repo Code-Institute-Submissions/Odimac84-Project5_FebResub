@@ -67,7 +67,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     form = ReviewForm() 
-    review_list = Review.objects.all()
+    review_list = Review.objects.filter(product=product_id)
     paginator = Paginator(review_list, 6)
 
     page_number = request.GET.get('page')
@@ -156,7 +156,7 @@ def createReview(request, product_id):
         review.author = request.POST.get('author')
         review.title = request.POST.get('title')         
         review.review = request.POST.get('review')         
-        review.product = get_object_or_404(Product, pk=product_id)        
+        review.product = get_object_or_404(Product, pk=product_id)      
         review.save()         
         return redirect(request.META['HTTP_REFERER'])
     else:
