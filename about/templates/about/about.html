@@ -24,7 +24,9 @@
         {{ feedback.content }} 
         <hr>
         {% if feedback.image %}
-        <img class="card-img-top img-fluid" src="{{ feedback.image }}" alt="Testimonial Image.">
+            <div class="img-size float-left">
+            <img class="card-img-top img-fluid" src="{{ feedback.image.url }}" alt="Testimonial Image.">
+            </div>
         {% endif %}
     {% endif %}
     </div> 
@@ -49,13 +51,14 @@
 </div>
 
 {% if request.user.is_authenticated %}
-<div class="container h-100">
-    <div class="row h-100">
+<div class="container">
+    <div class="row ">
         <div class="col-11 col-md-6 col-lg-7 my-auto text-color bg-account">
+            <h4 class="mb-1"> Let us know how you like us.</h4>
             <form action="{% url 'create_testimonial'  %}" method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-hover-index rounded-0">send
+                {{ form|crispy }}
+                <button class="btn btn-hover-index rounded-0 text-uppercase mb-2">Leave feedback
                 </button>
             </form>
         </div>

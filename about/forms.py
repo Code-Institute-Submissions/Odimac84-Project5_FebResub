@@ -7,16 +7,9 @@ class TestimonialForm(forms.ModelForm):
     class Meta:
         model = Testimonial
         fields = ('rating', 'content', 'image')
-        # choices = (
-        #     ('1', '1'),
-        #     ('2', '2'),
-        #     ('3', '3'),
-        #     ('4', '4'),
-        #     ('5', '5'),
-        # )
 
         name = forms.CharField,
-        rating = forms.ChoiceField(choices=[(x, x) for x in range(1, 5)]),
+        rating = forms.IntegerField,
         content = forms.Textarea,
 
     def __init__(self, *args, **kwargs):

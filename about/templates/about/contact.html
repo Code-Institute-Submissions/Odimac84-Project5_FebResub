@@ -17,8 +17,8 @@
             <hr>
             <form action="{% url 'create_contact'  %}" method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-hover-index rounded-0">send
+                {{ form|crispy }}
+                <button class="btn btn-hover-index rounded-0 text-uppercase mb-2 ">send
                 </button>
             </form>
         </div>

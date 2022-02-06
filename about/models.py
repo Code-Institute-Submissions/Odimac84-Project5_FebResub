@@ -3,10 +3,19 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
+
 class Testimonial(models.Model):
+    choices = (
+            (1, 1),
+            (2, 2),
+            (3, 3),
+            (4, 4),
+            (5, 5),
+        )
+
     name = models.ForeignKey(User, on_delete=models.CASCADE, related_name="testimonial")
     testimonal_date_on = models.DateTimeField(auto_now_add=True)
-    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], default=3, choices=choices)
     content = models.TextField(max_length=1000)
     image = models.ImageField(null=True, blank=True)
     approved = models.BooleanField(default=False)
