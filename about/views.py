@@ -13,9 +13,9 @@ def about_view(request):
     model = Testimonial
     form = TestimonialForm()
     template = 'about/about.html'
-    
+
     testimonials = Testimonial.objects.all()
-    
+
     paginator = Paginator(testimonials, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -52,17 +52,17 @@ def create_contact(request):
         contact.save()
         _send_confirmation_email(contact)
         return redirect('home')
-    
 
-def _send_confirmation_email(contact):        
+
+def _send_confirmation_email(contact):
     """Send confirmation email to user"""                
     template_subject = 'about/confirmation_emails/confirmation_email_subject.txt'
-    template_body = 'about/confirmation_emails/confirmation_email_body.txt'      
-    contact_email = settings.DEFAULT_FROM_EMAIL         
+    template_body = 'about/confirmation_emails/confirmation_email_body.txt'
+    contact_email = settings.DEFAULT_FROM_EMAIL
     subject = render_to_string(template_subject, {'contact': contact})
-    body = render_to_string(template_body, {'contact': contact})      
+    body = render_to_string(template_body, {'contact': contact})
     send_mail(subject, body, contact_email, [contact_email])
-    
+
 
 @login_required
 def create_testimonial(request):
@@ -75,5 +75,3 @@ def create_testimonial(request):
         feedback.content = request.POST.get('content')
         feedback.save()
         return redirect('home')
-
-
