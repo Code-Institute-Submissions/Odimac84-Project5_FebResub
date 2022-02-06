@@ -31,6 +31,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+
 class Review(models.Model):
     # Model for review on products
     product = models.ForeignKey(

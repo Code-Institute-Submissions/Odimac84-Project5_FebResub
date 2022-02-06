@@ -66,7 +66,7 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    
+
     form = ReviewForm()
     review_list = Review.objects.filter(product=product_id)
     paginator = Paginator(review_list, 6)
@@ -155,10 +155,10 @@ def createReview(request, product_id):
     if request.method == "POST":
         review = Review()
         review.author = request.POST.get('author')
-        review.title = request.POST.get('title')         
-        review.review = request.POST.get('review')         
-        review.product = get_object_or_404(Product, pk=product_id)      
-        review.save()         
+        review.title = request.POST.get('title')
+        review.review = request.POST.get('review')
+        review.product = get_object_or_404(Product, pk=product_id)
+        review.save()
         return redirect(request.META['HTTP_REFERER'])
     else:
         success_url = "/".join(request.get_full_path().split('/')[:-1])

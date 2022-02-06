@@ -55,7 +55,7 @@ def create_contact(request):
 
 
 def _send_confirmation_email(contact):
-    """Send confirmation email to user"""                
+    """Send confirmation email to user"""
     template_subject = 'about/confirmation_emails/confirmation_email_subject.txt'
     template_body = 'about/confirmation_emails/confirmation_email_body.txt'
     contact_email = settings.DEFAULT_FROM_EMAIL

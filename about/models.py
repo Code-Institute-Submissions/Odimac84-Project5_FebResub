@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
-
 class Testimonial(models.Model):
     choices = (
             (1, 1),
@@ -36,7 +35,7 @@ class Contact(models.Model):
     asked_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering =['asked_date']
+        ordering = ['asked_date']
 
     def __str__(self):
         return f"{self.name} asked a question on{self.asked_date}"

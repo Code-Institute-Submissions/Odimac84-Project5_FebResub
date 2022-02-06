@@ -22,13 +22,13 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields =('title', 'author', 'review')
+        fields = ('title', 'author', 'review')
 
         widget = {
             'title': forms.CharField,
             'author': forms.CharField,
             'review': forms.Textarea,
         }
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

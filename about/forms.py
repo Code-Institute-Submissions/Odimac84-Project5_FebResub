@@ -1,6 +1,7 @@
 from django import forms
 from .models import Testimonial, Contact
 
+
 # form for customer to leave a testimonial for site
 class TestimonialForm(forms.ModelForm):
 
