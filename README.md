@@ -29,7 +29,7 @@
 - [Credits](#credits)
   - [Media](#media)
   - [Acknowledgements](#acknowledgements)
-
+- [Changes](#Changes)
 ---
 
 PCGeeks is a gamer shop with components for PC and got an UX that is designed more to the female side of the buisness. 
@@ -180,6 +180,7 @@ The creation of an account gives access to the following features:
 -   Help the user to start a warranty claim or a service directly from their profile page.
 -   Recommended products that goes well with the ones in the cart.
 -   Technical specifications for the products that being sold on the site.
+- Put rating on specific products that will scale the rating that is set in DB atm.
 
 ## Testing
 
@@ -266,3 +267,15 @@ To deploy pcgeeks to Heroku, use the following steps:
 -   [Felipe Alarcon](https://github.com/fandressouza) for his helpful feedback and advice, and constant availability as a mentor
 -   Thanks to [Hampus Nilsson](https://github.com/Knasten) for both the help along the way and for the exchange of information, aswell as the good work on building the fixture files together. 
 -  And last but not least thank you to CI for the best Walkthrough project off the entire course.
+
+
+### Changes
+
+- Models for Tesitimonial, reviews and contact was added to the project
+- Forms for these models were added and implemented on site.
+- About us page was added housing Testimonials.
+- Contactpage was added to house the contact form.
+- Reviews for resides on product detail.
+- Facebook page was connected. rest of social links are still dummies. 
+- Newsletter from mailchimp was inplemented and tested. 
+- Sitemap.XLM and Robots.txt was added to repository.

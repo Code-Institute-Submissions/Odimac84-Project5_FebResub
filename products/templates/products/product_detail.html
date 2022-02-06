@@ -105,7 +105,7 @@
             <hr>
             <div class="card-body">
                 {% for review in page_obj %} 
-                <div class="review" style="padding: 10px;">
+                <div class="review bg-review" style="padding: 10px;">
                     {% if review.approved %}
                     <p class="font-weight-bold">{{ review.title }} <br>
                         <span class=" text-muted font-weight-normal">Posted by: {{ review.author }}</span>

@@ -32,6 +32,7 @@
 
 -   The product pages display the correct information and image.
 -   Products can successfully be added to the cart using the button.
+- customers can read and post revies on site, needs to be approved by admin before seen. this is to prevent spam.
 
 ## Shopping Cart
 
@@ -60,6 +61,12 @@
 -   The correct order history is displayed successfully.
 -   Clicking on the order number takes you to the receipt page to show you your receipt again.
 -   Creating a user has been tested and mails are beeing sent out as intended to verify your e-mail.
+
+## About us and contact
+
+- Forms has been tested to make sure they work as intended and so that emails are sent out when they are needed to. 
+- Testimonials needs approvement from admin before published on site and this has been tested so that it works as intended. 
+- any problems that there been has been resolved.
 
 ## Administrative Tools
 
