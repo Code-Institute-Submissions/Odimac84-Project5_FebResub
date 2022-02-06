@@ -250,6 +250,8 @@ To deploy pcgeeks to Heroku, use the following steps:
 -   Github
 -   Balsamiq
 -   Heroku
+-   Mailchimp for newsletter
+-   W3schools for research
 -   [Font Awesome](https://fontawesome.com/)
 -   [TinyJPG](https://tinyjpg.com/) used to compress all images
 
@@ -259,6 +261,7 @@ To deploy pcgeeks to Heroku, use the following steps:
 
 -   Icon for "No photo available" image from [Flat Icons](https://www.flaticon.com/authors/flat-icons)
 -   Information for the fixture files are picked up from BestBuy US and Amazon using stock pictures from the manufactors, these are ok to use for educational purpose. 
+- back to top button is from W3schools with some alternation in style and minimal in function.
      
 
 ### Acknowledgements
@@ -279,3 +282,5 @@ To deploy pcgeeks to Heroku, use the following steps:
 - Facebook page was connected. rest of social links are still dummies. 
 - Newsletter from mailchimp was inplemented and tested. 
 - Sitemap.XLM and Robots.txt was added to repository.
+- Back to top button added for products.
+- Overhaul in alot of the styling.
