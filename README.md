@@ -14,11 +14,12 @@
     - [Home Page](#home-page)
     - [Product Listing](#product-listing)
     - [Product View](#product-view)
-    - [Producers Page](#producers-page)
     - [User Account](#user-account)
     - [Shopping Cart](#shopping-cart)
     - [Payment](#payment)
     - [Administrator features](#administrator-features)
+    - [About us](#About-us)
+    - [Contact](#Contact)
   - [Features Left to implement](#features-left-to-implement)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -131,6 +132,8 @@ The shop offers a number of solutions to make specific products easier to list a
     -   Category
 -   Users can choose a quantity and add it to their cart
 
+- Reviews from people that own this product. this can be used by anyone even if they didnt buy it from us. But all reviews needs to be approved. 
+
 ![product details](readmefiles/detail_product.jpg)
 #### User Account
 
@@ -159,6 +162,16 @@ The creation of an account gives access to the following features:
 -   On product pages, an administrator has additional links to edit a products information or remove it from the shop
 -   An administrator can via members tab add a new product to the shop manually
 -   The administraor has the option of updating or deleting a product in either the detailed view of a product or in the product overview.
+#### About us
+
+- Short information about the store
+- Testimonaials from other customer based on their expirience with us.
+- Form to leave a testimonial. needs to be a logged in user aswell as the testimonial needs to be approved. 
+
+#### Contact
+
+- Contact form if they need to get it touch.
+- Sends a mail to the store mail to let us know someone needs to get it touch.
 
 ### Features Left to implement
 

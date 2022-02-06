@@ -61,7 +61,6 @@
 -   Clicking on the order number takes you to the receipt page to show you your receipt again.
 -   Creating a user has been tested and mails are beeing sent out as intended to verify your e-mail.
 
-
 ## Administrative Tools
 
 Links to adminsitrative tools in the navigation can only be seen if a user is logged in as an superuser.
@@ -126,5 +125,9 @@ These tests were performed on the following devices and browsers:
 - Wasent able to checkout when using desktop
 
     FIXED, had forgot to put in URLs for the checkout in the view for big screens.
+
+- Site broke when adding new models, but only on heroku.
+
+    FIXED, forgotten to export the DB to heroku.
 
 Other then these bugs there been some minor ones that been fixed along the way. but as far as i can see i cant find any major bugs that causes any problems for the site. 

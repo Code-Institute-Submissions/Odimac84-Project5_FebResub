@@ -2,20 +2,26 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-<div class="container h-100 banner-bg">
-    <form action="{% url 'create_contact'  %}" method= "POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-hover-violet rounded-0">send
-        </button>
-    </form>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-11 col-md-6 col-lg-7 my-auto text-color bg-account">
+            <h4 class="mb-1">Questions? <br> Fill out the form, and we get back to you.</h4>
+            <hr>
+            <form action="{% url 'create_contact'  %}" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-hover-index rounded-0">send
+                </button>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}

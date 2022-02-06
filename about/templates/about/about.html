@@ -11,11 +11,11 @@
 
 {% block content %}
 
-<h2 class="text-color">Testemonials</h2>
-<div class="card-body bg-account">
-    {% for feedback in page_obj %} 
+<h2 class="text-color">Testimonials</h2>
+{% for feedback in page_obj %}
+<div class="card-body bg-account mb-2">
     <div class="review" style="padding: 10px;">
-        {% if feedback.approved %}
+    {% if feedback.approved %}
         <p class="font-weight-bold text-color">Rating: {{ feedback.rating }}/5 <br>
             <span class=" text-muted font-weight-normal">Posted by: {{ feedback.name }}</span>
         </p>
@@ -23,10 +23,13 @@
         <h5 class="text-color">My expirience:</h5>
         {{ feedback.content }} 
         <hr>
-        {% endif %} 
-    </div>
-    {% endfor %}
+        {% if feedback.image %}
+        <img class="card-img-top img-fluid" src="{{ feedback.image }}" alt="Testimonial Image.">
+        {% endif %}
+    {% endif %}
+    </div> 
 </div>
+{% endfor %}
 <div class="pagination text-color">
     <span class="step-links">
         {% if page_obj.has_previous %}
@@ -46,13 +49,17 @@
 </div>
 
 {% if request.user.is_authenticated %}
-<div class="container banner-bg">
-    <form action="{% url 'create_testimonial'  %}" method= "POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-hover-violet rounded-0">send
-        </button>
-    </form>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-11 col-md-6 col-lg-7 my-auto text-color bg-account">
+            <form action="{% url 'create_testimonial'  %}" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-hover-index rounded-0">send
+                </button>
+            </form>
+        </div>
+    </div>
 </div>
 {% endif %}
 {% endblock %}
